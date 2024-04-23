@@ -6,6 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --sea-blue: 112 170 230;
+  --dark-sea-blue: 36 59 79;
+  --gray-titan: 52  52 55;
 }
 
 @media (prefers-color-scheme: dark) {

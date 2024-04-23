@@ -4,13 +4,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 import SectionHeader from "@/components/SectionHeader";
+import TalentTile from "@/components/TalentTile";
 
 type Props = {
   talentTree: TalentTree;
 };
 
 const TalentSeparator = () => (
-  <div className="w-[100px] h-[20px] bg-zinc-500" />
+  <div className="w-[109px] h-[16px] bg-gray-titan border-y-2 border-y-zinc-600 border-opacity-40" />
 );
 
 export default function TalentCalculator({ talentTree }: Props) {
@@ -28,23 +29,32 @@ export default function TalentCalculator({ talentTree }: Props) {
       </div>
       <div className="z-10 absolute w-full top-0 p-5">
         <SectionHeader text="TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000" />
-        <div className="mt-4 flex">
+        <div className="mt-8 flex justify-between items-center">
           <div>
             {talentTree.talentPaths.map((talentPath) => {
               return (
                 <div
                   key={talentPath.id}
                   data-testid="talent-path-row"
-                  className="flex"
+                  className="flex mt-[54px] items-center"
                 >
-                  <span data-testid="talent-path-name">{talentPath.name}</span>
-                  <div>
+                  <span
+                    data-testid="talent-path-name"
+                    className="uppercase font-bold w-[151px]"
+                  >
+                    {talentPath.name}
+                  </span>
+                  <div className="flex items-center justify-center">
                     {talentPath.talents.map((talent, index) => {
                       const isFirst = index === 0;
                       return (
-                        <div key={talent.id} data-testid="talent-path-icon">
+                        <div
+                          key={talent.id}
+                          data-testid="talent-path-icon"
+                          className="flex items-center"
+                        >
                           {!isFirst ? <TalentSeparator /> : null}
-                          <div>{talent.name}</div>
+                          <TalentTile talent={talent} />
                         </div>
                       );
                     })}
