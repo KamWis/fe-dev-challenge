@@ -4,15 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 import SectionHeader from "@/components/SectionHeader";
-import TalentTile from "@/components/TalentTile";
+import TalentPath from "@/components/TalentPath";
 
 type Props = {
   talentTree: TalentTree;
 };
-
-const TalentSeparator = () => (
-  <div className="w-[109px] h-[16px] bg-gray-titan border-y-2 border-y-zinc-600 border-opacity-40" />
-);
 
 export default function TalentCalculator({ talentTree }: Props) {
   const [pointsSent, setPointsSpent] = useState(talentTree.totalPointsSpent);
@@ -32,39 +28,14 @@ export default function TalentCalculator({ talentTree }: Props) {
         <div className="mt-8 flex justify-between items-center">
           <div>
             {talentTree.talentPaths.map((talentPath) => {
-              return (
-                <div
-                  key={talentPath.id}
-                  data-testid="talent-path-row"
-                  className="flex mt-[54px] items-center"
-                >
-                  <span
-                    data-testid="talent-path-name"
-                    className="uppercase font-bold w-[151px]"
-                  >
-                    {talentPath.name}
-                  </span>
-                  <div className="flex items-center justify-center">
-                    {talentPath.talents.map((talent, index) => {
-                      const isFirst = index === 0;
-                      return (
-                        <div
-                          key={talent.id}
-                          data-testid="talent-path-icon"
-                          className="flex items-center"
-                        >
-                          {!isFirst ? <TalentSeparator /> : null}
-                          <TalentTile talent={talent} />
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
+              return <TalentPath key={talentPath.id} talentPath={talentPath} />;
             })}
           </div>
-          <div data-testid="talents-to-spend">
-            {pointsSent} / {talentTree.totalPointsToSpend}
+          <div className="w-[196px] bg-zinc-950 bg-opacity-50  mr-12 text-center  mt-6 pt-5 pb-8 border-2 border-zinc-900 text-[1.6rem]/5">
+            <div data-testid="talents-to-spend" className="text-white">
+              {pointsSent} / {talentTree.totalPointsToSpend}
+            </div>
+            <div className="text-gray-700 text-[1.6rem] mt-2">Points Spent</div>
           </div>
         </div>
       </div>

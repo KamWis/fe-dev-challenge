@@ -1,5 +1,7 @@
 import clsx from "clsx";
 
+import TalentIcon from "@/components/TalentIcon";
+
 type Props = {
   talent: Talent;
 };
@@ -12,10 +14,13 @@ export default function TalentTile({ talent }: Props) {
 
   return (
     <div
-      className={clsx("z-10 w-[64px] h-[64px] p-1 border-[1px]", borderStyle)}
+      className={clsx(
+        "z-10 w-[61px] h-[61px] p-1 border-[1px] cursor-pointer",
+        borderStyle
+      )}
     >
-      <div className="w-[54px] h-[54px] bg-slate-800">
-        {/* {talent.name} */}
+      <div className="w-[51px] h-[51px] bg-slate-800">
+        <TalentIcon name={talent.name} />
       </div>
     </div>
   );

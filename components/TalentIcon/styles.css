@@ -1,0 +1,67 @@
+.talent-icon-background {
+    background-image: url("/talent-icons-sprite.png");
+}
+
+.talent-icon-background.stack {
+    background-position: 0px -50px;
+}
+
+.talent-icon-background.stack:hover {
+    background-position: 0px 0px;
+}
+
+.talent-icon-background.stamina {
+    background-position: -50px -50px;
+}
+
+.talent-icon-background.stamina:hover {
+    background-position: -50px 0px;
+}
+
+.talent-icon-background.sweet-tooth {
+    background-position: -100px -50px;
+}
+
+.talent-icon-background.sweet-tooth:hover {
+    background-position: -100px 0px;
+}
+
+.talent-icon-background.leadership {
+    background-position: -150px -50px;
+}
+
+.talent-icon-background.leadership:hover {
+    background-position: -150px 0px;
+}
+
+.talent-icon-background.water-resist {
+    background-position: -200px -50px;
+}
+
+.talent-icon-background.water-resist:hover {
+    background-position: -200px 0px;
+}
+
+.talent-icon-background.water-damage {
+    background-position: -250px -50px;
+}
+
+.talent-icon-background.water-damage:hover {
+    background-position: -250px 0px;
+}
+
+.talent-icon-background.electric-damage {
+    background-position: -300px -50px;
+}
+
+.talent-icon-background.electric-damage:hover {
+    background-position: -300px 0px;
+}
+
+.talent-icon-background.avoid-death {
+    background-position: -350px -50px;
+}
+
+.talent-icon-background.avoid-death:hover {
+    background-position: -350px 0px;
+}

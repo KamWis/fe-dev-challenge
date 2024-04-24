@@ -12,7 +12,7 @@ const TALENT_TREE_DATA_MOCK = {
           id: "joup1vjj1-4um",
           name: "stack",
           label: "Stack Damage",
-          isActive: true,
+          isActive: false,
         },
         {
           id: "lh14v8hv1no81",
@@ -42,13 +42,13 @@ const TALENT_TREE_DATA_MOCK = {
           id: "kvt209kv2p2vp",
           name: "water-resist",
           label: "Water Resistance buff",
-          isActive: true,
+          isActive: false,
         },
         {
           id: "ahsudhwew0fw3",
           name: "water-damage",
           label: "Water Damage buff",
-          isActive: true,
+          isActive: false,
         },
         {
           id: "kfo1k910v109j",
