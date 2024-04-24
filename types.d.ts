@@ -1,5 +1,6 @@
 type Talent = {
   id: string;
+  talentPath: string;
   name: string;
   label: string;
   isActive: boolean;
@@ -13,6 +14,5 @@ type TalentPath = {
 
 type TalentTree = {
   totalPointsToSpend: number;
-  totalPointsSpent: number;
   talentPaths: TalentPath[];
 };
